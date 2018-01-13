@@ -8,6 +8,7 @@ import Footer from './Footer/Footer';
 import Collaboration from './Collaboration/Collaboration';
 import Recipes from './Recipes/Recipes';
 import Menu from './Menu/Menu';
+import Location from './Location/Location';
 
 class App extends Component {
   static propTypes = {};
@@ -21,6 +22,7 @@ class App extends Component {
         <Request />
         <Banner />
         <Community />
+        <Location />
         <Menu />
         <Recipes />
         <Collaboration />

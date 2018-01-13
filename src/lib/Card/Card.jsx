@@ -1,18 +1,18 @@
 import React from 'react';
-import { string } from 'prop-types';
+import {string} from 'prop-types';
 import './card.css';
+import instagramIcon from '../../assets/images/instagram-btn.png';
 
-const Card = ({title, desription, image, icon}) => (
+const Card = ({title, description, image}) => (
   <div className="card">
-    {title && <div className="card-title"> {title} </div>}
-    {desription && <div className="card-description"> {desription} </div>}
-    {image && <div className="card-image">
-      <img alt="" src={image} />
-    </div>}
-    {icon && <div className="card-icon">
-      <img alt="icon" src={icon} />
+    <div className={"card-image"} style={{backgroundImage: `url(${image})`}}>
+      {title && <div className="card-title"> {title} </div>}
+      {description && <div className="card-description"> {description} </div>}
+      {image && <div className="card-icon">
+        <img alt="icon" src={instagramIcon}/>
+      </div>
+      }
     </div>
-    }
   </div>
 );
 
@@ -20,14 +20,12 @@ Card.propTypes = {
   title: string,
   description: string,
   image: string,
-  icon: string,
 };
 
 Card.defaultProps = {
   title: '',
   description: '',
   image: '',
-  icon: '',
 };
 
 export default Card;

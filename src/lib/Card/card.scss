@@ -9,6 +9,25 @@
   padding: 1rem;
   background: #FFFFFF;
 
+  &-title {
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+
+  &-description {
+    font-family: 'Gill Sans', sans-serif;
+    color: #333333;
+    line-height: 1.5;
+    padding: 5px;
+  }
+
+  &-image {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
   &-icon {
     position: absolute;
     top: 0;

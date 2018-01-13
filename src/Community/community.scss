@@ -1,0 +1,46 @@
+.community {
+  padding: 100px;
+
+  > div {
+    display: flex;
+    padding-bottom: 20px;
+
+    &:first-of-type {
+      background-image: url("../assets/images/detail02.png"), url("../assets/images/detail01.png");
+      background-repeat: no-repeat;
+      background-position: 75% bottom, 100% bottom;
+    }
+
+    &:nth-of-type(2) {
+      background-image: url("../assets/images/detail03.png");
+      background-repeat: no-repeat;
+      background-position: 10% 150%;
+
+    }
+
+    > div {
+      flex: 1;
+
+      > p {
+        font-size: 1.3rem;
+        margin-right: 20px;
+      }
+    }
+  }
+
+  .empty {
+    display: flex;
+    align-items: center;
+
+    .description {
+      padding: 10px;
+      margin: 0;
+      font-family: 'Gill Sans', sans-serif;
+      color: #333333;
+      font-size: 1.2rem;
+      line-height: 1.3;
+    }
+  }
+
+
+}

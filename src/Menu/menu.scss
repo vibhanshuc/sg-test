@@ -37,16 +37,24 @@
 
     &.two {
       z-index: 3;
-      margin-top: 85px;
+
+      .heading {
+        margin-top: 85px;
+      }
     }
 
     &.three {
       z-index: 2;
-      margin-top: 50px;
+
+      .heading {
+        margin-top: 50px;
+      }
     }
 
     &.four {
-      margin-top: 35px;
+      .heading {
+        margin-top: 35px;
+      }
     }
 
     &:not(:first-of-type) {

@@ -1,0 +1,27 @@
+.location {
+  position: relative;
+  &-head {
+    position: absolute;
+    top: 100px;
+    left: 30%;
+    z-index: 1;
+    background-color: #FFFFFF;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    > .heading {
+      align-items: center;
+      margin-top: -40px;
+    }
+
+    span {
+      font-family: 'Gill Sans', sans-serif;
+      color: ''
+    }
+
+  }
+  &-map {
+    height: 500px;
+  }
+}
