@@ -1,0 +1,41 @@
+.banner {
+  background: url("../assets/images/bg-pic@2x.png") no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &-logo {
+    position: absolute;
+    top: 100px;
+    left: 300px;
+    height: 100px;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  &-head {
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-title {
+      font-size: 4.2rem;
+      text-transform: uppercase;
+      line-height: 1;
+
+      &.big {
+        font-size: 6rem;
+      }
+
+      &.small {
+        font-size: 3rem;
+      }
+    }
+  }
+}
