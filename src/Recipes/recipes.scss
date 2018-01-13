@@ -1,0 +1,176 @@
+.recipes {
+
+  &-row {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 100px;
+    overflow: hidden;
+
+    &.align-end {
+      justify-content: flex-end;
+    }
+
+    &.align-start {
+      justify-content: flex-start;
+    }
+  }
+
+  &-column {
+    display: flex;
+    flex-direction: column;
+
+    &.align-end {
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+  }
+
+  &-list {
+    padding-top: 50px;
+  }
+
+  &-nav {
+    padding: 10px;
+    cursor: pointer;
+
+    &.disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+  }
+
+}
+
+.recipe {
+
+  margin: 10px;
+  position: relative;
+
+  &-card {
+    width: 300px;
+    border: 1px solid #E4E1E1;
+
+    &-header {
+      height: 300px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: #000000;
+      background-size: cover;
+      position: relative;
+    }
+
+    &-servings {
+      width: 80px;
+      height: 80px;
+      color: #FFFFFF;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      text-transform: uppercase;
+
+
+      span {
+        font-size: 1rem;
+        &:first-of-type {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    &-icon {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      background-color: #FED9CA;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &-content {
+      padding: 10px;
+
+      span {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        color: #808080;
+      }
+
+      h3 {
+        margin: 5px 0;
+        text-transform: uppercase;
+      }
+
+      p {
+        color: #636363;
+        font-size: 0.9rem;
+        font-family: 'Gill Sans', sans-serif;
+        text-align: justify;
+        line-height: 1.2;
+        margin-bottom: 0;
+      }
+    }
+
+    > .chef-choice {
+      position: absolute;
+      top: -50px;
+      z-index: 1;
+      right: 10%;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    &.small {
+
+      width: 200px;
+      border: 1px solid #E4E1E1;
+
+      .recipe-card {
+        &-header {
+          height: 200px;
+        }
+
+
+        &-servings {
+          width: 60px;
+          height: 60px;
+
+          span {
+            font-size: 0.8rem;
+
+            &:first-of-type {
+              font-size: 1.2rem;
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+  > span {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 0;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: lighten(darkgrey, 0.5);
+  }
+
+  &.align-bottom {
+    align-self: flex-end;
+  }
+}

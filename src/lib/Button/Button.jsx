@@ -9,7 +9,7 @@ const Button = ({onClickHandler, text, isPrimary, type}) => (
 
 Button.propTypes = {
   text: string.isRequired,
-  onClickHandler: func.isRequired,
+  onClickHandler: func,
   isPrimary: bool,
   type: string
 };
