@@ -1,0 +1,44 @@
+.heading {
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 15px;
+  &-title {
+    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: 1;
+
+
+    &.big {
+      font-size: 3.5rem;
+    }
+  }
+
+
+  .strike  {
+    position: relative;
+    z-index: 1;
+
+    &:before {
+      content: "";
+      margin: 0 auto;
+      position: absolute;
+      top: 25%;
+      left: -15%;
+      border-radius: 5px;
+      right: 0;
+      bottom: 0;
+      width: 130%;
+      z-index: -1;
+      height: 0.5rem;
+      background: #FFFFFF;
+    }
+
+    &-primary:before {
+      background: #FED9CA;
+    }
+  }
+
+
+}

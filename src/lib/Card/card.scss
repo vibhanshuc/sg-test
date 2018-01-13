@@ -1,0 +1,17 @@
+.card {
+  position: relative;
+  display: inline-block;
+  height: 250px;
+  width: 250px;
+  vertical-align: bottom;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+  padding: 1rem;
+  background: #FFFFFF;
+
+  &-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
