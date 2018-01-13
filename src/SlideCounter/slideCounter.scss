@@ -1,0 +1,27 @@
+.counter {
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &-item {
+    display: flex;
+    justify-content: center;
+    width: 30px;
+    height: 1px;
+    margin-top: 30px;
+    transition-duration: 400ms;
+    transition-timing-function: ease;
+    border-bottom: 1px solid;
+    font-size: 0;
+
+    &.active {
+      width: 40px;
+      font-size: 1.5rem;
+      line-height: 0.5rem;
+    }
+  }
+}
