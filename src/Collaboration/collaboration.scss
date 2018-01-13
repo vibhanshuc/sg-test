@@ -1,0 +1,56 @@
+.collaboration {
+  background-image: url("../assets/images/detail02.png");
+  background-repeat: no-repeat;
+  background-color: #FED9CA;
+  background-position: 66% 5px;
+  padding: 100px;
+  display: flex;
+
+  &-column {
+    flex: 1;
+  }
+
+
+
+  &-content {
+    max-width: 50%;
+  }
+
+  p {
+    color: #9A9A9A;
+    font-family: 'Gill Sans', sans-serif;
+  }
+}
+
+
+form {
+  > div {
+    display: flex;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 10px;
+    }
+
+    &:last-of-type {
+      justify-content: flex-end;
+    }
+  }
+
+  label {
+    padding-bottom: 5px;
+    text-transform: uppercase;
+  }
+
+  input, select {
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid #808080;
+    outline: none;
+    padding: 5px 0;
+    color: #808080;
+  }
+
+}
