@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { number, func } from 'prop-types';
 import Scrollspy from 'react-scrollspy';
 import './header.css';
 
-class Header extends Component {
+class Header extends PureComponent {
   static propTypes = {
     onUpdate: func.isRequired,
     total: number.isRequired
@@ -56,7 +56,7 @@ class Header extends Component {
           <a className="header-list-item" href="#section-6">
             Contact
           </a>
-          <a className="header-list-item" href="#">
+          <a className="header-list-item" href="#login">
             Login
           </a>
         </div>

@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import './location.css';
 import locationMarker from '../assets/images/location-icon.png';
 import Heading from '../lib/Heading/Heading';
 
 const google = window.google;
 
-class Location extends Component {
+class Location extends PureComponent {
   componentDidMount() {
     window.google.maps.event.addDomListener(window, 'load', this.init);
   }

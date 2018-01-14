@@ -1,3 +1,5 @@
+@import './lib/variables';
+
 @font-face {
   font-family: 'Gill Sans';
   src: url('./assets/fonts/GillSans.ttc') format('OpenType');
@@ -5,16 +7,16 @@
 
 @font-face {
   font-family: 'DCB';
-  src: url('./assets/fonts/DIN Condensed Bold.ttf') format('truetype');
+  src: url('./assets/fonts/DIN-Condensed-Bold.ttf') format('truetype');
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: DCB, sans-serif;
-  font-size: 16px;
-}
-
-* {
-  box-sizing: border-box;
+  font-family: $primary-font-family;
+  font-size: $base-font-size;
 }

@@ -1,44 +1,106 @@
-.community {
-  padding: 100px;
+@import '../lib/mixins';
+@import '../lib/variables';
 
-  > div {
+.community {
+  padding: 100px 10px;
+
+  &-row {
     display: flex;
     padding-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
 
-    &:first-of-type {
-      background-image: url('../assets/images/detail02.png'),
-        url('../assets/images/detail01.png');
-      background-repeat: no-repeat;
-      background-position: 75% bottom, 100% bottom;
+    &:nth-of-type(1) .community-row-column {
+      background: 120% 120% no-repeat url('../assets/images/detail02.png');
     }
 
-    &:nth-of-type(2) {
-      background-image: url('../assets/images/detail03.png');
-      background-repeat: no-repeat;
-      background-position: 10% 150%;
+    &:nth-of-type(1) .community-row-column:last-of-type {
+      background: 90% 100% no-repeat url('../assets/images/detail01.png');
     }
 
-    > div {
+    &:nth-of-type(2) .community-row-column:first-of-type {
+      background: bottom right no-repeat url('../assets/images/detail03.png');
+    }
+
+    &-column {
       flex: 1;
+      display: inline-block;
+      transition-duration: 1000ms;
+      transition-timing-function: ease;
+      opacity: 1;
 
-      > p {
-        font-size: 1.3rem;
-        margin-right: 20px;
+      &.down {
+        transform: translate(0, 5000px);
+        opacity: 0;
+      }
+
+      &:nth-child(3n) {
+        transition-delay: 100ms;
+      }
+
+      &:nth-child(4n) {
+        transition-delay: 200ms;
       }
     }
+
+    &-head {
+      max-width: 300px;
+
+      p {
+        font-size: 1.5 * $base-font-size;
+        margin: 0;
+        padding: 2rem 0;
+        width: 90%;
+      }
+    }
+  }
+
+  @include tablet() {
+    display: flex;
+    flex-wrap: wrap;
+
+    > div:empty {
+      width: 0;
+    }
+
+    &-row {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  @include desktop() {
+    &-row {
+      flex-direction: row;
+    }
+  }
+
+  @include large-desktop() {
+    padding-left: 10%;
+    padding-right: 10%;
+
+    .community-row {
+      flex-direction: row;
+    }
+  }
+
+  @include x-large-desktop {
+    padding-left: 20%;
+    padding-right: 20%;
   }
 
   .empty {
     display: flex;
     align-items: center;
+    width: 250px;
+  }
 
-    .description {
-      padding: 10px;
-      margin: 0;
-      font-family: 'Gill Sans', sans-serif;
-      color: #333333;
-      font-size: 1.2rem;
-      line-height: 1.3;
-    }
+  .description {
+    padding: 10px;
+    margin: 0;
+    font-family: $secondary-font-family;
+    color: $secondary-color;
+    font-size: $base-font-size;
+    line-height: 1.3;
   }
 }

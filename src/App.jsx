@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import Header from './Header/Header';
 import SlideCounter from './SlideCounter/SlideCounter';
 import Banner from './Banner/Banner';
@@ -9,21 +9,19 @@ import Collaboration from './Collaboration/Collaboration';
 import Recipes from './Recipes/Recipes';
 import Menu from './Menu/Menu';
 import Location from './Location/Location';
+import { cards, menuColumns, recipes } from './lib/data';
 
-class App extends Component {
-  static propTypes = {};
-  static defaultProps = {};
-
+class App extends PureComponent {
   state = {
     current: 1
   };
 
   sections = [
     <Banner />,
-    <Community />,
+    <Community items={cards} />,
     <Location />,
-    <Menu />,
-    <Recipes />,
+    <Menu items={menuColumns} />,
+    <Recipes recipes={recipes} />,
     <Collaboration />
   ];
 
@@ -45,7 +43,9 @@ class App extends Component {
         <Request />
         {this.sections.map((section, index) => (
           <div id={`section-${index + 1}`} key={index}>
-            {section}
+            {React.cloneElement(section, {
+              isVisible: this.state.current === index + 1
+            })}
           </div>
         ))}
         <Footer />

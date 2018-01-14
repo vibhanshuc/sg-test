@@ -1,8 +1,10 @@
+@import '../lib/mixins';
+@import '../lib/variables';
+
 footer {
-  padding: 100px 100px 50px;
-  background-color: #333333;
-  font-family: 'DCB', sans-serif;
-  color: #fff;
+  background-color: $secondary-color;
+  font-family: $primary-font-family;
+  padding: 100px 10px;
 
   .section {
     padding-right: 5px;
@@ -13,7 +15,7 @@ footer {
     }
 
     &-link {
-      font-family: 'Gill Sans', sans-serif;
+      font-family: $secondary-font-family;
       color: #bfbfbf;
       cursor: pointer;
       padding: 5px 0;
@@ -21,9 +23,10 @@ footer {
   }
 
   .logo {
+    color: #ffffff;
     display: flex;
     flex-direction: column;
-    font-size: 4rem;
+    font-size: 2 * $large-font-size;
     align-items: flex-end;
     line-height: 1;
     text-transform: uppercase;
@@ -31,11 +34,16 @@ footer {
     span:first-of-type {
       font-size: 2.5rem;
     }
+
+    @include phone {
+      margin-top: 20px;
+      align-items: center;
+    }
   }
 
   .footer {
     &-text {
-      font-family: 'Gill Sans', sans-serif;
+      font-family: $secondary-font-family;
       color: #9a9a9a;
     }
 
@@ -53,6 +61,10 @@ footer {
       &:not(:first-of-type) {
         margin-top: 20px;
       }
+
+      @include phone() {
+        flex-direction: column;
+      }
     }
 
     &-column {
@@ -60,5 +72,10 @@ footer {
       flex: 0.6;
       justify-content: space-between;
     }
+  }
+
+  @include desktop() {
+    padding-left: 20%;
+    padding-right: 20%;
   }
 }

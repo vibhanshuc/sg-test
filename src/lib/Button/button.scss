@@ -1,26 +1,26 @@
+@import '../variables';
+
 .btn {
   text-transform: uppercase;
   margin: 0;
   padding: 10px 20px 5px;
   background: #333333;
-  border: 1px solid #a6a6a6;
+  border: 0;
   color: #fed9ca;
-  font-family: DCB, sans-serif;
-  font-size: 1rem;
+  font-family: $primary-font-family;
+  font-size: $base-font-size;
   line-height: 1;
   outline: none;
   cursor: pointer;
   text-align: right;
 
   &-primary {
-    background: #333333;
-    border: 0;
-    color: #fed9ca;
+    background: $secondary-color;
+    color: $primary-color;
   }
 
   &-secondary {
-    color: #333333;
-    border: 0;
-    background: #fed9ca;
+    color: $secondary-color;
+    background: $primary-color;
   }
 }

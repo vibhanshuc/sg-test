@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import './collaboration.css';
 import Heading from '../lib/Heading/Heading';
 import Button from '../lib/Button/Button';
 
-class Collaboration extends Component {
+class Collaboration extends PureComponent {
   handleFormSubmit = event => {
     event.preventDefault();
   };
@@ -77,8 +77,5 @@ class Collaboration extends Component {
     );
   }
 }
-
-Collaboration.propTypes = {};
-Collaboration.defaultProps = {};
 
 export default Collaboration;
