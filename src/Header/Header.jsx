@@ -25,41 +25,42 @@ class Header extends Component {
 
   render() {
     return (
-      <header>
-        <Scrollspy
-          className="header-list"
-          items={this.listOfSections()}
-          offset={-100}
-          onUpdate={this.handleUpdate}
-        >
-          <div>
-            <li className="header-list-item big">Logo</li>
-            <li className="header-list-item">
-              <a href="#section-1">About</a>
-            </li>
-            <li className="header-list-item">
-              <a href="#section-2">Community</a>
-            </li>
-            <li className="header-list-item">
-              <a href="#section-3">Location</a>
-            </li>
-            <li className="header-list-item">
-              <a href="#section-4">Our Menu</a>
-            </li>
-            <li className="header-list-item">
-              <a href="#section-5">Recipes</a>
-            </li>
-          </div>
-          <div>
-            <li className="header-list-item right">
-              <a href="#section-6">Contact</a>
-            </li>
-            <li className="header-list-item right">
-              <a href="#">Login</a>
-            </li>
-          </div>
-        </Scrollspy>
-      </header>
+      <Scrollspy
+        componentTag="header"
+        items={this.listOfSections()}
+        offset={-100}
+        onUpdate={this.handleUpdate}
+      >
+        <div className="header-list">
+          <div className="header-list-item big">Logo</div>
+          <a className="header-list-item" href="#section-1">
+            About
+          </a>
+          <a className="header-list-item" href="#section-2">
+            Community
+          </a>
+
+          <a className="header-list-item" href="#section-3">
+            Location
+          </a>
+
+          <a className="header-list-item" href="#section-4">
+            Our Menu
+          </a>
+
+          <a className="header-list-item" href="#section-5">
+            Recipes
+          </a>
+        </div>
+        <div className="header-list right">
+          <a className="header-list-item" href="#section-6">
+            Contact
+          </a>
+          <a className="header-list-item" href="#">
+            Login
+          </a>
+        </div>
+      </Scrollspy>
     );
   }
 }

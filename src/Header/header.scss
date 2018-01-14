@@ -7,36 +7,27 @@ header {
   align-items: center;
 
   .header {
-    &-logo {
-      font-size: 2rem;
-    }
-
     &-list {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
       display: flex;
+      align-items: center;
       justify-content: space-between;
       flex: 1;
 
-      > div {
-        display: flex;
-        align-items: center;
+      &.right {
+        justify-content: flex-end;
       }
 
       &-item {
         display: inline;
-        padding: 20px;
         font-size: 1rem;
         text-transform: uppercase;
+        padding: 20px;
+        text-decoration: none;
+        color: #333333;
 
         &.big {
+          padding: 20px;
           font-size: 2rem;
-        }
-
-        a {
-          text-decoration: none;
-          color: #333333;
         }
       }
     }
