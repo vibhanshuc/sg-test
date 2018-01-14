@@ -1,7 +1,7 @@
 .collaboration {
-  background-image: url("../assets/images/detail02.png");
+  background-image: url('../assets/images/detail02.png');
   background-repeat: no-repeat;
-  background-color: #FED9CA;
+  background-color: #fed9ca;
   background-position: 66% 5px;
   padding: 100px;
   display: flex;
@@ -10,18 +10,15 @@
     flex: 1;
   }
 
-
-
   &-content {
     max-width: 50%;
   }
 
   p {
-    color: #9A9A9A;
+    color: #9a9a9a;
     font-family: 'Gill Sans', sans-serif;
   }
 }
-
 
 form {
   > div {
@@ -44,7 +41,8 @@ form {
     text-transform: uppercase;
   }
 
-  input, select {
+  input,
+  select {
     background: transparent;
     border: 0;
     border-bottom: 1px solid #808080;
@@ -52,5 +50,4 @@ form {
     padding: 5px 0;
     color: #808080;
   }
-
 }

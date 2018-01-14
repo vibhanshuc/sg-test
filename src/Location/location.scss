@@ -5,7 +5,7 @@
     top: 100px;
     left: 30%;
     z-index: 1;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -17,9 +17,8 @@
 
     span {
       font-family: 'Gill Sans', sans-serif;
-      color: ''
+      color: #333333;
     }
-
   }
   &-map {
     height: 500px;

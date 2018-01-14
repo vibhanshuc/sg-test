@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Header from './Header/Header';
 import Banner from './Banner/Banner';
 import SlideCounter from './SlideCounter/SlideCounter';
@@ -10,12 +10,14 @@ import Recipes from './Recipes/Recipes';
 import Menu from './Menu/Menu';
 import Location from './Location/Location';
 
-const sections = [<Banner className={"slide1"}/>,
-  <Community/>,
-  <Location/>,
-  <Menu/>,
-  <Recipes/>,
-  <Collaboration/>,];
+const sections = [
+  <Banner className={'slide1'} />,
+  <Community />,
+  <Location />,
+  <Menu />,
+  <Recipes />,
+  <Collaboration />
+];
 
 class App extends Component {
   static propTypes = {};
@@ -25,14 +27,21 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <SlideCounter total={sections.length} current={1}/>
+        <SlideCounter total={sections.length} current={1} />
         <Request />
-        {sections.map((section, index) => (<div ref={(node) => this.sections[index] = node} id={`slide slide-${index}`} key={index}>{section}</div>))}
-        <Footer/>
+        {sections.map((section, index) => (
+          <div
+            ref={node => (this.sections[index] = node)}
+            id={`slide slide-${index}`}
+            key={index}
+          >
+            {section}
+          </div>
+        ))}
+        <Footer />
       </div>
     );
   }
 }
-
 
 export default App;

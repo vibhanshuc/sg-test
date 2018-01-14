@@ -6,16 +6,16 @@
     padding-bottom: 20px;
 
     &:first-of-type {
-      background-image: url("../assets/images/detail02.png"), url("../assets/images/detail01.png");
+      background-image: url('../assets/images/detail02.png'),
+        url('../assets/images/detail01.png');
       background-repeat: no-repeat;
       background-position: 75% bottom, 100% bottom;
     }
 
     &:nth-of-type(2) {
-      background-image: url("../assets/images/detail03.png");
+      background-image: url('../assets/images/detail03.png');
       background-repeat: no-repeat;
       background-position: 10% 150%;
-
     }
 
     > div {
@@ -41,6 +41,4 @@
       line-height: 1.3;
     }
   }
-
-
 }

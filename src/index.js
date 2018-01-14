@@ -1,5 +1,5 @@
 import React from 'react';
-import {render} from 'react-dom';
+import { render } from 'react-dom';
 import './index.css';
 import App from './App';
 
@@ -12,7 +12,7 @@ if (module.hot) {
   console.log('hot module enabled');
   module.hot.accept('./App', function() {
     const NextApp = require('./App').default;
-    render(<NextApp/>, rootEl);
+    render(<NextApp />, rootEl);
   });
 }
 

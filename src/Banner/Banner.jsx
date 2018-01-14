@@ -1,9 +1,8 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './banner.css';
 import logoImage from '../assets/images/stamp.png';
 
 class Banner extends Component {
-
   static propTypes = {};
   static defaultProps = {};
 
@@ -22,6 +21,5 @@ class Banner extends Component {
     );
   }
 }
-
 
 export default Banner;

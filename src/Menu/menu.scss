@@ -2,7 +2,7 @@
   position: relative;
   padding-left: 100px;
   padding-right: 100px;
-  background: #F8F8F8;
+  background: #f8f8f8;
 
   &-head {
     position: absolute;
@@ -26,10 +26,9 @@
     display: flex;
     flex: 1;
     padding-top: 220px;
-    background: #F8F8F8;
+    background: #f8f8f8;
     flex-direction: column;
     padding-bottom: 40px;
-
 
     &.one {
       z-index: 4;
@@ -63,7 +62,6 @@
 
     &:not(:last-of-type) {
       border-right: 1px solid grey;
-
     }
   }
 
@@ -87,7 +85,7 @@
     }
 
     &-price {
-      border: 2px solid #FED9CA;
+      border: 2px solid #fed9ca;
       padding: 5px 5px 0;
     }
   }
