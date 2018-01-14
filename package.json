@@ -3,11 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "husky": "^0.14.3",
-    "lint-staged": "^6.0.0",
-    "node-sass-chokidar": "^0.0.3",
-    "npm-run-all": "^4.1.2",
-    "prettier": "^1.10.2",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
@@ -24,12 +19,21 @@
     "build": "npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "pretify": "prettier --single-quote --write src/**/*.{js,jsx,json,scss}"
+    "pretify": "prettier --single-quote --write src/**/*.{js,jsx,json,scss}",
+    "build:serve": "npm run build && http-server ./build/"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,json,scss}": [
       "prettier --single-quote --write",
       "git add"
     ]
+  },
+  "devDependencies": {
+    "http-server": "^0.11.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.0.0",
+    "node-sass-chokidar": "^0.0.3",
+    "npm-run-all": "^4.1.2",
+    "prettier": "^1.10.2"
   }
 }
