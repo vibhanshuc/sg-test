@@ -9,7 +9,9 @@ const { google } = window;
 
 class Location extends PureComponent {
   componentDidMount() {
-    window.google.maps.event.addDomListener(window, 'load', this.init);
+    if (window.google) {
+      window.google.maps.event.addDomListener(window, 'load', this.init);
+    }
   }
 
   init = () => {
