@@ -6,18 +6,18 @@ import './header.css';
 class Header extends PureComponent {
   static propTypes = {
     onUpdate: func.isRequired,
-    total: number.isRequired
+    total: number.isRequired,
   };
 
   listOfSections = () => {
     const sections = [];
-    for (let i = 0; i < this.props.total; i++) {
+    for (let i = 0; i < this.props.total; i += 1) {
       sections.push(`section-${i + 1}`);
     }
     return sections;
   };
 
-  handleUpdate = item => {
+  handleUpdate = (item) => {
     if (item && item.id) {
       this.props.onUpdate(Number(item.id.split('-').reverse()[0]));
     }
@@ -28,7 +28,7 @@ class Header extends PureComponent {
       <Scrollspy
         componentTag="header"
         items={this.listOfSections()}
-        offset={-100}
+        offset={-200}
         onUpdate={this.handleUpdate}
       >
         <div className="header-list">

@@ -1,3 +1,5 @@
+@import '../lib/variables';
+
 .location {
   position: relative;
   &-head {
@@ -16,8 +18,8 @@
     }
 
     span {
-      font-family: 'Gill Sans', sans-serif;
-      color: #333333;
+      font-family: $secondary-font-family;
+      color: $secondary-color;
     }
   }
   &-map {

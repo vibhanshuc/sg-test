@@ -7,20 +7,20 @@ import Button from '../lib/Button/Button';
 import nextIcon from '../assets/images/next.png';
 import backIcon from '../assets/images/back.png';
 
-const Recipes = ({ recipes }) => (
+const Recipes = ({ items }) => (
   <div className="recipes">
     <div className="recipes-row">
       <div>
-        <Heading title={'Popular'} subTitle={'Recipes'} isStrike isPrimary />
-        <Button text={'See all'} />
+        <Heading title="Popular" subTitle="Recipes" isStrike isPrimary />
+        <Button text="See all" />
       </div>
       <div className="recipes-column align-end">
-        <Heading title={'Do you want to share your own recipe?'} />
-        <Button text={'Send it now'} />
+        <Heading title="Do you want to share your own recipe?" />
+        <Button text="Send it now" />
       </div>
     </div>
     <div className="recipes-row align-start recipes-list">
-      {recipes.map(recipe => <Recipe key={recipe.id} {...recipe} />)}
+      {items.map(recipe => <Recipe key={recipe.id} {...recipe} />)}
     </div>
     <div className="recipes-row align-end">
       <div className="recipes-nav disabled">

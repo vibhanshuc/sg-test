@@ -1,8 +1,10 @@
 import React from 'react';
-import { string, bool, func } from 'prop-types';
+import { string, func, bool } from 'prop-types';
 import './button.css';
 
-const Button = ({ onClickHandler, text, isPrimary, type }) => (
+const Button = ({
+  onClickHandler, text, isPrimary, type,
+}) => (
   <button
     className={`btn ${isPrimary ? 'btn-primary' : 'btn-secondary'}`}
     onClick={onClickHandler}
@@ -13,15 +15,17 @@ const Button = ({ onClickHandler, text, isPrimary, type }) => (
 );
 
 Button.propTypes = {
-  text: string.isRequired,
+  text: string,
   onClickHandler: func,
   isPrimary: bool,
-  type: string
+  type: string,
 };
 
 Button.defaultProps = {
+  text: 'Click Me',
   onClickHandler: () => {},
-  type: 'button'
+  type: 'button',
+  isPrimary: false,
 };
 
 export default Button;

@@ -7,7 +7,7 @@ export const recipeProps = {
   imageURL: string.isRequired,
   isSmall: bool,
   isBottomAligned: bool,
-  isChefChoice: bool
+  isChefChoice: bool,
 };
 
 export const recipesProps = { items: arrayOf(shape(recipeProps)).isRequired };

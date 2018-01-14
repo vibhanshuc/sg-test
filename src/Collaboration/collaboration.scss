@@ -2,8 +2,7 @@
 @import '../lib/variables';
 
 .collaboration {
-  background: 66% 5px $primary-color no-repeat
-    url('../assets/images/detail02.png');
+  background: 66% 5px $primary-color no-repeat url('../assets/images/detail02.png');
   padding: 100px 10px;
   display: flex;
   flex-direction: column;

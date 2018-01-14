@@ -7,10 +7,7 @@ const SlideCounter = ({ total, current }) => (
     {Array(total)
       .fill(total)
       .map((item, index) => (
-        <span
-          key={index}
-          className={`counter-item${index + 1 === current ? ' active' : ''}`}
-        >
+        <span key={index} className={`counter-item${index + 1 === current ? ' active' : ''}`}>
           {index + 1}
         </span>
       ))}
@@ -19,7 +16,7 @@ const SlideCounter = ({ total, current }) => (
 
 SlideCounter.propTypes = {
   total: number.isRequired,
-  current: number.isRequired
+  current: number.isRequired,
 };
 
 export default SlideCounter;

@@ -12,8 +12,8 @@ const Footer = () => (
         {sections.map((item, index) => (
           <div key={index} className="section">
             <span className="section-title">Section {index + 1}</span>
-            {subSections.map((subSection, index) => (
-              <div key={index} className="section-link">
+            {subSections.map((subSection, idx) => (
+              <div key={idx} className="section-link">
                 Subsection
               </div>
             ))}
@@ -27,8 +27,8 @@ const Footer = () => (
     </div>
     <div className="footer-row space-between align-center">
       <div className="footer-text">
-        2017. Company. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor .
+        {new Date().getFullYear()}. Company. Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit, sed do eiusmod tempor.
       </div>
       <img alt="social-icon" src={socialImage} />
     </div>

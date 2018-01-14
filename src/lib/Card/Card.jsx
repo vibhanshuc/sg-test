@@ -5,7 +5,7 @@ import instagramIcon from '../../assets/images/instagram-btn.png';
 
 const Card = ({ title, description, image }) => (
   <div className="card">
-    <div className={'card-image'} style={{ backgroundImage: `url(${image})` }}>
+    <div className="card-image" style={{ backgroundImage: `url(${image})` }}>
       {title && <div className="card-title"> {title} </div>}
       {description && <div className="card-description"> {description} </div>}
       {image && (
@@ -20,13 +20,13 @@ const Card = ({ title, description, image }) => (
 Card.propTypes = {
   title: string,
   description: string,
-  image: string
+  image: string,
 };
 
 Card.defaultProps = {
   title: '',
   description: '',
-  image: ''
+  image: '',
 };
 
 export default Card;

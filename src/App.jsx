@@ -13,7 +13,7 @@ import { cards, menuColumns, recipes } from './lib/data';
 
 class App extends PureComponent {
   state = {
-    current: 1
+    current: 1,
   };
 
   sections = [
@@ -21,30 +21,24 @@ class App extends PureComponent {
     <Community items={cards} />,
     <Location />,
     <Menu items={menuColumns} />,
-    <Recipes recipes={recipes} />,
-    <Collaboration />
+    <Recipes items={recipes} />,
+    <Collaboration />,
   ];
 
-  handleSectionScrollIntoView = sectionId => {
+  handleSectionScrollIntoView = (sectionId) => {
     this.setState({ current: sectionId });
   };
 
   render() {
     return (
       <div>
-        <Header
-          total={this.sections.length}
-          onUpdate={this.handleSectionScrollIntoView}
-        />
-        <SlideCounter
-          total={this.sections.length}
-          current={this.state.current}
-        />
+        <Header total={this.sections.length} onUpdate={this.handleSectionScrollIntoView} />
+        <SlideCounter total={this.sections.length} current={this.state.current} />
         <Request />
         {this.sections.map((section, index) => (
           <div id={`section-${index + 1}`} key={index}>
             {React.cloneElement(section, {
-              isVisible: this.state.current === index + 1
+              isVisible: this.state.current === index + 1,
             })}
           </div>
         ))}

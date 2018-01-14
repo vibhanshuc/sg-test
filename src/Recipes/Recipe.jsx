@@ -11,7 +11,7 @@ const Recipe = ({
   imageURL,
   isSmall,
   isBottomAligned,
-  isChefChoice
+  isChefChoice,
 }) => (
   <div className={`recipe ${isBottomAligned ? 'align-bottom' : ''}`}>
     <div className={`recipe-card ${isSmall ? 'small' : ''}`}>
@@ -20,10 +20,7 @@ const Recipe = ({
           <img src={chefStamp} alt="Chef Choice Recipe" />
         </div>
       )}
-      <div
-        className="recipe-card-header"
-        style={{ backgroundImage: `url(${imageURL})` }}
-      >
+      <div className="recipe-card-header" style={{ backgroundImage: `url(${imageURL})` }}>
         <div className="recipe-card-servings">
           <span>{servings}</span>
           <span>Servings</span>
@@ -46,7 +43,7 @@ Recipe.propTypes = recipeProps;
 Recipe.defaultProps = {
   isSmall: true,
   isBottomAligned: false,
-  isChefChoice: false
+  isChefChoice: false,
 };
 
 export default Recipe;
