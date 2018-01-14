@@ -10,6 +10,13 @@ import Recipes from './Recipes/Recipes';
 import Menu from './Menu/Menu';
 import Location from './Location/Location';
 
+const sections = [<Banner className={"slide1"}/>,
+  <Community/>,
+  <Location/>,
+  <Menu/>,
+  <Recipes/>,
+  <Collaboration/>,];
+
 class App extends Component {
   static propTypes = {};
   static defaultProps = {};
@@ -18,15 +25,10 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <SlideCounter total={6} current={1}/>
+        <SlideCounter total={sections.length} current={1}/>
         <Request />
-        <Banner />
-        <Community />
-        <Location />
-        <Menu />
-        <Recipes />
-        <Collaboration />
-        <Footer />
+        {sections.map((section, index) => (<div ref={(node) => this.sections[index] = node} id={`slide slide-${index}`} key={index}>{section}</div>))}
+        <Footer/>
       </div>
     );
   }
