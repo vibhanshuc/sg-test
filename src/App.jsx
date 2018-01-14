@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header/Header';
-import Banner from './Banner/Banner';
 import SlideCounter from './SlideCounter/SlideCounter';
+import Banner from './Banner/Banner';
 import Request from './Request/Request';
 import Community from './Community/Community';
 import Footer from './Footer/Footer';
@@ -10,31 +10,41 @@ import Recipes from './Recipes/Recipes';
 import Menu from './Menu/Menu';
 import Location from './Location/Location';
 
-const sections = [
-  <Banner className={'slide1'} />,
-  <Community />,
-  <Location />,
-  <Menu />,
-  <Recipes />,
-  <Collaboration />
-];
-
 class App extends Component {
   static propTypes = {};
   static defaultProps = {};
 
+  state = {
+    current: 1
+  };
+
+  sections = [
+    <Banner />,
+    <Community />,
+    <Location />,
+    <Menu />,
+    <Recipes />,
+    <Collaboration />
+  ];
+
+  handleSectionScrollIntoView = sectionId => {
+    this.setState({ current: sectionId });
+  };
+
   render() {
     return (
       <div>
-        <Header />
-        <SlideCounter total={sections.length} current={1} />
+        <Header
+          total={this.sections.length}
+          onUpdate={this.handleSectionScrollIntoView}
+        />
+        <SlideCounter
+          total={this.sections.length}
+          current={this.state.current}
+        />
         <Request />
-        {sections.map((section, index) => (
-          <div
-            ref={node => (this.sections[index] = node)}
-            id={`slide slide-${index}`}
-            key={index}
-          >
+        {this.sections.map((section, index) => (
+          <div id={`section-${index + 1}`} key={index}>
             {section}
           </div>
         ))}
