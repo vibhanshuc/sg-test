@@ -45,42 +45,52 @@ class Community extends PureComponent {
             <Button text="Know More" />
             <p>LOREM IPSUM DOLOR SIT AMET ERNUT TEMPARTERO SERTU PER NABORE EN TORNA ENTALTO</p>
           </div>
-          <div className="community-row-column down">
-            <Card {...items[0]} />
-          </div>
-          <div className="community-row-column down">
-            <Card {...items[1]} />
+          <div className="community-group down">
+            <div className="community-row-column">
+              <Card {...items[0]} />
+            </div>
+            <div className="community-row-column">
+              <Card {...items[1]} />
+            </div>
           </div>
         </div>
         <div className="community-row">
-          <div className="community-row-column down">
-            <Card {...items[2]} />
+          <div className="community-group down">
+            <div className="community-row-column">
+              <Card {...items[2]} />
+            </div>
+            <div className="community-row-column">
+              <Card {...items[3]} />
+            </div>
           </div>
-          <div className="community-row-column down">
-            <Card {...items[3]} />
+          <div className="community-group down">
+            <div className="empty community-row-column">
+              <p className="description">
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                esse cillum dolore
+              </p>
+            </div>
+            <div className="empty" />
           </div>
-          <div className="empty community-row-column down">
-            <p className="description">
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore
-            </p>
-          </div>
-          <div className="empty" />
         </div>
         <div className="community-row">
-          <div className="empty community-row-column down">
-            <p className="description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Duis aute irure.
-            </p>
+          <div className="community-group down">
+            <div className="empty community-row-column">
+              <p className="description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Duis aute irure.
+              </p>
+            </div>
+            <div className="empty" />
           </div>
-          <div className="empty" />
-          <div className="community-row-column down">
-            <Card {...items[4]} />
-          </div>
-          <div className="community-row-column down">
-            <Card {...items[5]} />
+          <div className="community-group down">
+            <div className="community-row-column">
+              <Card {...items[4]} />
+            </div>
+            <div className="community-row-column">
+              <Card {...items[5]} />
+            </div>
           </div>
         </div>
       </div>

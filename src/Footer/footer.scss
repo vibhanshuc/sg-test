@@ -4,19 +4,20 @@
 footer {
   background-color: $secondary-color;
   font-family: $primary-font-family;
-  padding: 100px 10px;
+  padding: 50px 10%;
 
   .section {
     padding-right: 5px;
+    color: rgba($color: #ffffff, $alpha: 0.47);
 
     &-title {
       text-transform: uppercase;
-      color: #ffdac9;
+      color: $primary-color;
     }
 
     &-link {
       font-family: $secondary-font-family;
-      color: #bfbfbf;
+      font-size: 1.1rem;
       cursor: pointer;
       padding: 5px 0;
     }
@@ -64,10 +65,5 @@ footer {
       flex: 0.6;
       justify-content: space-between;
     }
-  }
-
-  @include desktop() {
-    padding-left: 20%;
-    padding-right: 20%;
   }
 }

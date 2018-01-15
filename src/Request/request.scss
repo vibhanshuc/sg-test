@@ -1,12 +1,12 @@
 .request {
   z-index: 1;
   position: fixed;
-  right: -30px;
+  right: 0;
   top: 50%;
-  transform: rotateZ(-90deg);
+  transform: rotateZ(-90deg) translateY(50%);
   font-size: 1.2rem;
   text-transform: uppercase;
-  background: #e6e6e6;
-  padding: 10px 15px 3px;
+  background: #ffffff;
+  padding: 5px 10px;
   cursor: pointer;
 }

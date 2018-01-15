@@ -8,7 +8,7 @@ const SlideCounter = ({ total, current }) => (
       .fill(total)
       .map((item, index) => (
         <span key={index} className={`counter-item${index + 1 === current ? ' active' : ''}`}>
-          {index + 1}
+          {`${index + 1}`.padStart(2, '0')}
         </span>
       ))}
   </div>

@@ -7,11 +7,15 @@ export const cards = [
     title: '@buzzfeedfood',
     description:
       'It’s taco Tuesday! These tacos from @jesseszewczyk have no added sugars and are SO good . Find the recipe from the link in our bio! : @taylormillerphotos',
+    comments: '60',
+    likes: '14.7k',
   },
   {
     title: '@love_food',
     description:
       'Waffle sticks in Copenhagen! Milk chocolate with sprinkles, dark chocolate with coconut and milk chocolate with peanuts! [ : @foodwithmichel] #lovefood',
+    comments: '789',
+    likes: '99.7k',
   },
   {
     image:
@@ -20,6 +24,8 @@ export const cards = [
   {
     title: '@buzzfeedfood',
     description: 'Getting into long weekend  mode like #pancitpalabok @jeepneynyc)',
+    comments: '152',
+    likes: '18.2k',
   },
   {
     image:

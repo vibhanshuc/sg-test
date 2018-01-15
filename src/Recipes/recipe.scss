@@ -5,11 +5,11 @@
   position: relative;
 
   &-card {
-    width: 300px;
-    border: 1px solid #e4e1e1;
+    width: 370px;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.04);
 
     &-header {
-      height: 300px;
+      height: 370px;
       background-position: center;
       background-repeat: no-repeat;
       background-color: #000000;
@@ -18,8 +18,8 @@
     }
 
     &-servings {
-      width: 80px;
-      height: 80px;
+      width: 100px;
+      height: 110px;
       color: #ffffff;
       position: absolute;
       display: flex;
@@ -30,9 +30,9 @@
       text-transform: uppercase;
 
       span {
-        font-size: $base-font-size;
+        font-size: 1.5 * $base-font-size;
         &:first-of-type {
-          font-size: 2rem;
+          font-size: 3.5 * $base-font-size;
         }
       }
     }
@@ -42,12 +42,12 @@
       right: 0;
       bottom: 0;
       background-color: $primary-color;
-      width: 50px;
-      height: 50px;
+      width: 60px;
+      height: 60px;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 10px;
+      padding: 15px;
 
       img {
         width: 100%;
@@ -55,22 +55,23 @@
     }
 
     &-content {
-      padding: 10px;
+      padding: 30px;
 
       span {
-        font-size: $small-font-size;
+        font-size: $base-font-size;
         text-transform: uppercase;
-        color: #808080;
+        color: rgba($color: #595955, $alpha: 0.3);
       }
 
       h3 {
+        font-size: 1.5rem;
         margin: 5px 0;
         text-transform: uppercase;
       }
 
       p {
-        color: #636363;
-        font-size: $small-font-size;
+        color: #595955;
+        font-size: $base-font-size;
         font-family: $secondary-font-family;
         text-align: justify;
         line-height: 1.2;
@@ -90,12 +91,11 @@
     }
 
     &.small {
-      width: 200px;
-      border: 1px solid #e4e1e1;
+      width: 240px;
 
       .recipe-card {
         &-header {
-          height: 200px;
+          height: 240px;
         }
 
         &-servings {
@@ -119,8 +119,8 @@
     justify-content: flex-end;
     margin: 10px 0;
     text-transform: uppercase;
-    font-size: 0.9rem;
-    color: lighten(darkgrey, 0.5);
+    font-size: 1.1rem;
+    color: $secondary-color;
   }
 
   &.align-bottom {

@@ -2,49 +2,58 @@
 @import '../lib/variables';
 
 .community {
-  padding: 100px 10px;
+  padding: 50px 10%;
+
+  &-group {
+    display: flex;
+
+    transition-duration: 1300ms;
+    transition-timing-function: ease;
+    opacity: 1;
+    padding-bottom: 30px;
+
+    &.down {
+      transform: translate(0, 5000px);
+      opacity: 0;
+    }
+  }
 
   &-row {
     display: flex;
-    padding-bottom: 20px;
     flex-direction: column;
     align-items: center;
 
-    &:nth-of-type(1) .community-row-column {
-      background: 120% 120% no-repeat url('../assets/images/detail02.png');
+    &:nth-of-type(1) .community-group {
+      background: 50% 120% no-repeat url('../assets/images/detail02.png'),
+        100% 95% no-repeat url('../assets/images/detail01.png');
     }
 
-    &:nth-of-type(1) .community-row-column:last-of-type {
-      background: 90% 100% no-repeat url('../assets/images/detail01.png');
+    &:nth-of-type(2) .community-group:first-of-type {
+      background: 20% 120% no-repeat url('../assets/images/detail03.png');
+      transition-delay: 100ms;
     }
 
-    &:nth-of-type(2) .community-row-column:first-of-type {
-      background: bottom right no-repeat url('../assets/images/detail03.png');
+    &:nth-of-type(2) .community-group:last-of-type {
+      transition-delay: 200ms;
+    }
+
+    &:nth-of-type(3) .community-group:first-of-type {
+      transition-delay: 300ms;
+    }
+
+    &:nth-of-type(3) .community-group:last-of-type {
+      transition-delay: 400ms;
     }
 
     &-column {
+      margin: 0 10px;
       flex: 1;
       display: inline-block;
-      transition-duration: 1000ms;
-      transition-timing-function: ease;
-      opacity: 1;
-
-      &.down {
-        transform: translate(0, 5000px);
-        opacity: 0;
-      }
-
-      &:nth-child(3n) {
-        transition-delay: 100ms;
-      }
-
-      &:nth-child(4n) {
-        transition-delay: 200ms;
-      }
     }
 
     &-head {
       max-width: 300px;
+      margin-bottom: 75px;
 
       p {
         font-size: 1.5 * $base-font-size;
@@ -76,17 +85,9 @@
   }
 
   @include large-desktop() {
-    padding-left: 10%;
-    padding-right: 10%;
-
     .community-row {
       flex-direction: row;
     }
-  }
-
-  @include x-large-desktop {
-    padding-left: 20%;
-    padding-right: 20%;
   }
 
   .empty {
@@ -96,11 +97,11 @@
   }
 
   .description {
-    padding: 10px;
+    padding: 10px 0;
     margin: 0;
     font-family: $secondary-font-family;
     color: $secondary-color;
-    font-size: $base-font-size;
+    font-size: 1.1 * $base-font-size;
     line-height: 1.3;
   }
 }

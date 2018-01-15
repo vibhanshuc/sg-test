@@ -2,14 +2,9 @@
 
 .menu {
   position: relative;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 10%;
+  padding-right: 10%;
   background: #f8f8f8;
-
-  @include large-desktop() {
-    padding-left: 20%;
-    padding-right: 20%;
-  }
 
   &-head {
     position: absolute;
@@ -37,6 +32,10 @@
     flex-direction: column;
     padding-bottom: 40px;
 
+    .heading {
+      margin-bottom: 20px;
+    }
+
     &-1 {
       z-index: 4;
     }
@@ -58,26 +57,29 @@
     }
 
     &-4 {
+      background: transparent;
+      z-index: 2;
       .heading {
         margin-top: 35px;
       }
     }
 
     &:not(:first-of-type) {
-      margin-left: -6px;
+      margin-left: -8px;
     }
 
     &:not(:last-of-type) {
-      border-right: 1px solid grey;
+      border-right: 1px solid #cecece;
     }
   }
 
   &-item {
-    margin-left: 20px;
+    margin-left: 35px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 30px;
+    margin-right: 5px;
 
     &-title {
       text-transform: uppercase;
@@ -85,15 +87,15 @@
     }
 
     &-description {
-      font-size: 0.8rem;
-      color: #696969;
+      font-size: 1rem;
+      color: #595959;
       font-family: $secondary-font-family;
       padding-bottom: 10px;
     }
 
     &-price {
       border: 2px solid $primary-color;
-      padding: 5px 5px 0;
+      padding: 5px;
     }
   }
 

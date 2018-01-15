@@ -4,8 +4,7 @@
   position: relative;
   height: 250px;
   width: 250px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin: 1rem;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.06);
   padding: 1rem;
   background: #ffffff;
 
@@ -32,5 +31,18 @@
     position: absolute;
     top: 0;
     right: 0;
+    height: 60px;
+    width: 60px;
+  }
+
+  &-footer {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+
+    span {
+      padding: 5px;
+      text-transform: uppercase;
+    }
   }
 }

@@ -23,14 +23,13 @@
       content: '';
       margin: 0 auto;
       position: absolute;
-      top: 25%;
-      left: -15%;
-      border-radius: 5px;
+      top: calc(50% - 3.5px);
+      left: -10%;
       right: 0;
       bottom: 0;
-      width: 130%;
+      width: 120%;
       z-index: -1;
-      height: 0.5rem;
+      height: 0.4rem;
       background: #ffffff;
     }
 

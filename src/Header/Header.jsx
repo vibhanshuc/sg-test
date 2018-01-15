@@ -28,7 +28,7 @@ class Header extends PureComponent {
       <Scrollspy
         componentTag="header"
         items={this.listOfSections()}
-        offset={-200}
+        offset={-300}
         onUpdate={this.handleUpdate}
       >
         <div className="header-list">
