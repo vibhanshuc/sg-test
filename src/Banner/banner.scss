@@ -27,16 +27,16 @@
     align-items: center;
 
     &-title {
-      font-size: $large-font-size * 2;
+      font-size: $large-font-size * 3;
       text-transform: uppercase;
       line-height: 1;
 
       &.big {
-        font-size: $large-font-size * 3;
+        font-size: $large-font-size * 4;
       }
 
       &.small {
-        font-size: $large-font-size;
+        font-size: $large-font-size * 1.5;
       }
     }
   }

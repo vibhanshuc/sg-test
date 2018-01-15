@@ -18,52 +18,15 @@
   }
 
   &-content {
-    max-width: 50%;
+    max-width: 90%;
 
-    @include phone {
-      max-width: 100%;
+    @include desktop {
+      max-width: 60%;
     }
   }
 
   p {
     color: #9a9a9a;
     font-family: $secondary-font-family;
-  }
-
-  form {
-    > div {
-      display: flex;
-      padding: 10px 0;
-
-      div {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-
-        &:last-of-type {
-          margin-left: 10px;
-        }
-      }
-
-      &:last-of-type {
-        justify-content: flex-end;
-      }
-    }
-
-    label {
-      padding-bottom: 5px;
-      text-transform: uppercase;
-    }
-
-    input,
-    select {
-      font-family: $secondary-font-family;
-      background: transparent;
-      border: 0;
-      border-bottom: 1px solid $secondary-color;
-      outline: none;
-      padding: 5px 0;
-      color: #808080;
-    }
   }
 }

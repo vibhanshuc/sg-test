@@ -6,7 +6,7 @@
   padding-right: 10px;
   background: #f8f8f8;
 
-  @include desktop() {
+  @include large-desktop() {
     padding-left: 20%;
     padding-right: 20%;
   }

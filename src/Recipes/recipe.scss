@@ -30,7 +30,7 @@
       text-transform: uppercase;
 
       span {
-        font-size: 1rem;
+        font-size: $base-font-size;
         &:first-of-type {
           font-size: 2rem;
         }
@@ -103,7 +103,7 @@
           height: 60px;
 
           span {
-            font-size: 0.8rem;
+            font-size: $small-font-size;
 
             &:first-of-type {
               font-size: 1.2rem;

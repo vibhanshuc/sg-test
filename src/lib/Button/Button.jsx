@@ -15,14 +15,13 @@ const Button = ({
 );
 
 Button.propTypes = {
-  text: string,
+  text: string.isRequired,
   onClickHandler: func,
   isPrimary: bool,
   type: string,
 };
 
 Button.defaultProps = {
-  text: 'Click Me',
   onClickHandler: () => {},
   type: 'button',
   isPrimary: false,

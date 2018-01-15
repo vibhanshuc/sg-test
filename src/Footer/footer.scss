@@ -23,21 +23,13 @@ footer {
   }
 
   .logo {
-    color: #ffffff;
     display: flex;
     flex-direction: column;
-    font-size: 2 * $large-font-size;
     align-items: flex-end;
-    line-height: 1;
-    text-transform: uppercase;
 
-    span:first-of-type {
-      font-size: 2.5rem;
-    }
-
-    @include phone {
-      margin-top: 20px;
-      align-items: center;
+    .heading {
+      color: #ffffff;
+      align-items: flex-end;
     }
   }
 

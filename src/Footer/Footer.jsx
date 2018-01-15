@@ -1,6 +1,7 @@
 import React from 'react';
 import './footer.css';
 import socialImage from '../assets/images/social.png';
+import Heading from '../lib/Heading/Heading';
 
 const sections = Array(5).fill(5);
 const subSections = Array(5).fill(5);
@@ -21,8 +22,7 @@ const Footer = () => (
         ))}
       </div>
       <div className="logo">
-        <span>This is the</span>
-        <span>Logo</span>
+        <Heading title="This is the" subTitle="Logo" />
       </div>
     </div>
     <div className="footer-row space-between align-center">
