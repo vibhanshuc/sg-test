@@ -8,6 +8,11 @@
     width: 370px;
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.04);
 
+    &:hover {
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+    }
+
     &-header {
       height: 370px;
       background-position: center;
@@ -26,7 +31,6 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background-color: rgba(0, 0, 0, 0.5);
       text-transform: uppercase;
 
       span {

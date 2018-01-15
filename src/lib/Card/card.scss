@@ -8,6 +8,11 @@
   padding: 1rem;
   background: #ffffff;
 
+  &:hover {
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+
   &-title {
     font-size: 1.5 * $base-font-size;
     padding: 10px;
