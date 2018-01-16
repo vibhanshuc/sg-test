@@ -1,10 +1,12 @@
+@import '../lib/variables';
+
 .request {
   z-index: 1;
   position: fixed;
   right: 0;
   top: 50%;
   transform: rotateZ(-90deg) translateY(50%);
-  font-size: 1.2rem;
+  font-size: 1.3 * $base-font-size;
   text-transform: uppercase;
   background: #ffffff;
   padding: 5px 10px;

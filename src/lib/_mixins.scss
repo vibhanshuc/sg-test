@@ -29,3 +29,80 @@
     @content;
   }
 }
+
+@mixin padded {
+  padding: $gutter-height $gutter-width;
+}
+
+@mixin padded-lr {
+  padding-left: $gutter-width;
+  padding-right: $gutter-width;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-justify($param) {
+  justify-content: $param;
+}
+
+@mixin flex-align($param) {
+  align-items: $param;
+}
+
+@mixin flex-justify-align($param1, $param2: $param1) {
+  @include flex-justify($param1);
+  @include flex-align($param2);
+}
+
+@mixin flex-row-center {
+  @include flex-row;
+  @include flex-center;
+}
+
+@mixin flex-row-justify($param) {
+  @include flex-row;
+  @include flex-justify($param);
+}
+
+@mixin flex-row-align($param) {
+  @include flex-row;
+  @include flex-align($param);
+}
+
+@mixin flex-row-justify-align($param1, $param2: $param1) {
+  @include flex-row;
+  @include flex-justify-align($param1, $param2);
+}
+
+@mixin flex-column-center {
+  @include flex-column;
+  @include flex-center;
+}
+
+@mixin flex-column-justify($param) {
+  @include flex-column;
+  @include flex-justify($param);
+}
+
+@mixin flex-column-align($param) {
+  @include flex-column;
+  @include flex-align($param);
+}
+
+@mixin flex-column-justify-align($param1, $param2: $param1) {
+  @include flex-column;
+  @include flex-justify-align($param1, $param2);
+}

@@ -52,7 +52,7 @@ class Header extends PureComponent {
             Recipes
           </a>
         </div>
-        <div className="header-list right">
+        <div className="header-list justify-end">
           <a className="header-list-item" href="#section-6">
             Contact
           </a>

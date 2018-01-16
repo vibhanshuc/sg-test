@@ -57,6 +57,7 @@ export const recipes = [
     isChefChoice: false,
     servings: 2,
     imageURL: card2,
+    title: 'Pineapple fruit salad with fresh cream',
     description:
       'Make a speedy version of romesco sauce with its famous almond and red pepper flavours. Serve on sourdough and add broccoli for a colourful, vegetable',
   },

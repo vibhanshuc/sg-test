@@ -44,7 +44,7 @@ const ContactForm = ({ onSubmit }) => (
         </select>
       </div>
     </div>
-    <div className="form-row align-end">
+    <div className="form-row justify-end">
       <Button text="Send" type="submit" isPrimary />
     </div>
   </form>

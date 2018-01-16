@@ -14,15 +14,15 @@ const Recipes = ({ items }) => (
         <Heading title="Popular" subTitle="Recipes" isStrike isPrimary />
         <Button text="See all" />
       </div>
-      <div className="recipes-column align-end">
+      <div className="recipes-column end">
         <Heading title="Do you want to share your own recipe?" />
         <Button text="Send it now" />
       </div>
     </div>
-    <div className="recipes-row align-start recipes-list">
+    <div className="recipes-row justify-start recipes-list">
       {items.map(recipe => <Recipe key={recipe.id} {...recipe} />)}
     </div>
-    <div className="recipes-row align-end">
+    <div className="recipes-row justify-end">
       <div className="recipes-nav disabled">
         <img src={backIcon} alt="Back button" />
       </div>

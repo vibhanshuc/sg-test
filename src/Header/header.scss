@@ -1,32 +1,31 @@
+@import '../lib/variables';
 @import '../lib/mixins';
+
 header {
   position: fixed;
   width: 100%;
   padding: 0;
   z-index: 10;
-  display: flex;
-  align-items: center;
+  @include flex-row-align(center);
 
   .header {
     &-list {
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
+      @include flex-row-justify-align(space-evenly, center);
       flex: 1;
 
-      &.right {
-        justify-content: flex-end;
+      &.justify-end {
+        @include flex-justify(flex-end);
       }
 
       &-item {
-        font-size: 1.3rem;
+        font-size: 1.3 * $base-font-size;
         text-transform: uppercase;
         padding: 10px 20px;
         text-decoration: none;
         color: $secondary-color;
 
         &.big {
-          font-size: 2rem;
+          font-size: $larger-font-size;
         }
       }
     }

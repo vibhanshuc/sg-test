@@ -1,4 +1,7 @@
 @import '../lib/variables';
+@import '../lib/mixins';
+
+$box-shadow: 0 20px 30px;
 
 .recipe {
   margin-right: 20px;
@@ -6,10 +9,10 @@
 
   &-card {
     width: 370px;
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.04);
+    box-shadow: #{$box-shadow} rgba(0, 0, 0, 0.04);
 
     &:hover {
-      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+      box-shadow: #{$box-shadow} rgba(0, 0, 0, 0.1);
       cursor: pointer;
     }
 
@@ -17,24 +20,20 @@
       height: 370px;
       background-position: center;
       background-repeat: no-repeat;
-      background-color: #000000;
       background-size: cover;
       position: relative;
     }
 
     &-servings {
+      @include flex-column-center;
       width: 100px;
       height: 110px;
       color: #ffffff;
       position: absolute;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       text-transform: uppercase;
 
       span {
-        font-size: 1.5 * $base-font-size;
+        font-size: $large-font-size;
         &:first-of-type {
           font-size: 3.5 * $base-font-size;
         }
@@ -42,15 +41,13 @@
     }
 
     &-icon {
+      @include flex-row-center;
       position: absolute;
       right: 0;
       bottom: 0;
       background-color: $primary-color;
       width: 60px;
       height: 60px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       padding: 15px;
 
       img {
@@ -64,17 +61,17 @@
       span {
         font-size: $base-font-size;
         text-transform: uppercase;
-        color: rgba($color: #595955, $alpha: 0.3);
+        color: rgba($color: $third-color, $alpha: 0.3);
       }
 
       h3 {
-        font-size: 1.5rem;
+        font-size: $large-font-size;
         margin: 5px 0;
         text-transform: uppercase;
       }
 
       p {
-        color: #595955;
+        color: $third-color;
         font-size: $base-font-size;
         font-family: $secondary-font-family;
         text-align: justify;
@@ -107,10 +104,10 @@
           height: 60px;
 
           span {
-            font-size: $small-font-size;
+            font-size: 0.8 * $base-font-size;
 
             &:first-of-type {
-              font-size: 1.2rem;
+              font-size: 1.2 * $base-font-size;
             }
           }
         }
@@ -119,11 +116,10 @@
   }
 
   > span {
-    display: flex;
-    justify-content: flex-end;
+    @include flex-row-justify(flex-end);
     margin: 10px 0;
     text-transform: uppercase;
-    font-size: 1.1rem;
+    font-size: 1.1 * $base-font-size;
     color: $secondary-color;
   }
 

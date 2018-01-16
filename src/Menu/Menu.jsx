@@ -8,13 +8,9 @@ import { menuPropTypes } from './propTypeDefinitions';
 class Menu extends PureComponent {
   static propTypes = menuPropTypes;
 
-  componentWillReceiveProps(nextProps) {
-    console.log(nextProps);
-  }
-
   render() {
     return (
-      <div className="menu">
+      <div className="menu padded">
         <div className="menu-head">
           <Heading subTitle="Our Menu" isStrike isPrimary />
           <Button text="Know More" />

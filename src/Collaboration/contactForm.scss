@@ -1,18 +1,20 @@
 @import '../lib/variables';
+@import '../lib/mixins';
+
+$text-color: rgba($color: #3c3c3c, $alpha: 0.3);
 
 .form {
   &-row {
-    display: flex;
+    @include flex-row;
     padding: 10px 0;
 
-    &.align-end {
-      justify-content: flex-end;
+    &.justify-end {
+      @include flex-justify(flex-end);
     }
   }
 
   &-column {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     flex: 1;
 
     &:last-of-type {
@@ -32,11 +34,11 @@
       border-bottom: 1px solid $secondary-color;
       outline: none;
       padding: 5px 0;
-      color: rgba($color: #3c3c3c, $alpha: 0.3);
+      color: $text-color;
     }
 
     input::placeholder {
-      color: rgba($color: #3c3c3c, $alpha: 0.3);
+      color: $text-color;
     }
   }
 }

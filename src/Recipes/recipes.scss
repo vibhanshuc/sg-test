@@ -2,40 +2,38 @@
 @import '../lib/variables';
 
 .recipes {
-  padding-top: 100px;
+  @include padded;
+  padding-right: 0;
+
   &-row {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 10px;
-    padding-right: 10px;
+    @include flex-row-justify(space-between);
     overflow: hidden;
 
-    @include desktop() {
-      padding-left: 10%;
-      padding-right: 10%;
+    &:first-of-type,
+    &:last-of-type {
+      padding-right: $gutter-width;
     }
 
-    &.align-end {
-      justify-content: flex-end;
+    &:not(:first-of-type):not(:last-of-type) {
+      padding-top: 100px;
+      padding-bottom: 20px;
     }
 
-    &.align-start {
-      justify-content: flex-start;
+    &.justify-end {
+      @include flex-justify(flex-end);
+    }
+
+    &.justify-start {
+      @include flex-justify(flex-start);
     }
   }
 
   &-column {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
 
-    &.align-end {
-      justify-content: flex-end;
-      align-items: flex-end;
+    &.end {
+      @include flex-justify-align(flex-end);
     }
-  }
-
-  &-list {
-    padding-top: 50px;
   }
 
   &-nav {

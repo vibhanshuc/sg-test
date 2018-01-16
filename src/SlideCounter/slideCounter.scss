@@ -1,16 +1,16 @@
+@import '../lib/variables';
+@import '../lib/mixins';
+
 .counter {
+  @include flex-column-center;
   position: fixed;
   z-index: 10;
   top: 50%;
   transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   left: 10px;
 
   &-item {
-    display: flex;
-    justify-content: center;
+    @include flex-row-center;
     width: 20px;
     height: 1px;
     margin-top: 20px;
@@ -21,7 +21,7 @@
 
     &.active {
       width: 30px;
-      font-size: 1.5rem;
+      font-size: $large-font-size;
       line-height: 0;
     }
   }

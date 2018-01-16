@@ -1,19 +1,19 @@
 @import '../lib/variables';
+@import '../lib/mixins';
 
 .location {
   position: relative;
   &-head {
+    @include flex-column;
     position: absolute;
     top: 100px;
     left: 10%;
     z-index: 1;
     background-color: #ffffff;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
 
     > .heading {
-      align-items: center;
+      @include flex-align(center);
       margin-top: -40px;
     }
 
