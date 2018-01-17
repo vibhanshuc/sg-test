@@ -1,6 +1,6 @@
 {
   "name": "graphene",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": true,
   "dependencies": {
     "prop-types": "^15.6.0",
