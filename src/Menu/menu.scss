@@ -4,6 +4,7 @@
   @include padded-lr;
   position: relative;
   background: #f8f8f8;
+  z-index: -1;
 
   &-head {
     @include flex-column-center;
@@ -25,36 +26,30 @@
     background: #f8f8f8;
     padding-bottom: 40px;
 
-    .heading {
-      margin-bottom: 20px;
+    &-content {
+      &:nth-of-type(2n + 1) {
+        transform: translateY(772px);
+      }
+      &:nth-of-type(2n) {
+        transform: translateY(-772px);
+      }
     }
 
-    &-1 {
+    &:first-of-type {
       z-index: 4;
     }
 
-    &-2 {
+    &:nth-of-type(2) {
       z-index: 3;
-
-      .heading {
-        margin-top: 85px;
-      }
     }
 
-    &-3 {
+    &:nth-of-type(3) {
       z-index: 2;
-
-      .heading {
-        margin-top: 50px;
-      }
     }
 
-    &-4 {
+    &:last-of-type {
+      z-index: 3;
       background: transparent;
-      z-index: 2;
-      .heading {
-        margin-top: 35px;
-      }
     }
 
     &:not(:first-of-type) {

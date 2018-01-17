@@ -3,6 +3,8 @@
 
 .location {
   position: relative;
+  background: #ffffff;
+
   &-head {
     @include flex-column;
     position: absolute;

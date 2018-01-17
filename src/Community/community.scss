@@ -3,6 +3,7 @@
 
 .community {
   @include padded;
+  background: #ffffff;
 
   &-group {
     @include flex-row;

@@ -4,6 +4,7 @@
 .recipes {
   @include padded;
   padding-right: 0;
+  background: #ffffff;
 
   &-row {
     @include flex-row-justify(space-between);
