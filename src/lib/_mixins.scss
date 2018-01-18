@@ -32,11 +32,18 @@
 
 @mixin padded {
   padding: $gutter-height $gutter-width;
+  @include phone {
+    padding: 5px;
+  }
 }
 
 @mixin padded-lr {
   padding-left: $gutter-width;
   padding-right: $gutter-width;
+  @include phone {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 }
 
 @mixin flex-row {

@@ -28,8 +28,16 @@
       text-transform: uppercase;
       line-height: 1;
 
+      @include phone {
+        font-size: 2 * $larger-font-size;
+      }
+
       &.big {
         font-size: 4 * $larger-font-size;
+
+        @include phone {
+          font-size: 3 * $larger-font-size;
+        }
       }
 
       &.small {

@@ -12,6 +12,10 @@
 
     &:first-of-type,
     &:last-of-type {
+      @include phone {
+        @include flex-column;
+        padding: 10px;
+      }
       padding-right: $gutter-width;
     }
 
@@ -33,6 +37,9 @@
     @include flex-column;
 
     &.end {
+      @include phone {
+        margin-top: 20px;
+      }
       @include flex-justify-align(flex-end);
     }
   }
