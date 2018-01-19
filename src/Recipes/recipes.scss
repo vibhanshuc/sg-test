@@ -47,8 +47,11 @@
   &-nav {
     padding: 10px;
     cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
 
-    &.disabled {
+    &:disabled {
       opacity: 0.3;
       cursor: not-allowed;
     }

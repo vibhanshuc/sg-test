@@ -6,6 +6,7 @@ $box-shadow: 0 20px 30px;
 .recipe {
   margin-right: 20px;
   position: relative;
+  transition: all 0.5s ease-out;
 
   &-card {
     width: 370px;
