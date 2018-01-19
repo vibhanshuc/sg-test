@@ -6,6 +6,11 @@
   background: #f8f8f8;
   z-index: -1;
 
+  @include tablet {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
   &-head {
     @include flex-column-center;
     position: absolute;

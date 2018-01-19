@@ -34,7 +34,7 @@ class Menu extends PureComponent {
         ref={(node) => {
           this.container = node;
         }}
-        className="menu padded"
+        className="menu"
       >
         <div className="menu-head">
           <Heading subTitle="Our Menu" isStrike isPrimary />

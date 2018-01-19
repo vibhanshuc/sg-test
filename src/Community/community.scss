@@ -4,6 +4,7 @@
 .community {
   @include padded;
   background: #ffffff;
+  overflow: hidden;
 
   &-group {
     @include flex-row;
